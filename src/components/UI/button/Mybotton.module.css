@@ -1,9 +1,38 @@
-.myBtn{
-    padding: 5px 15px;
-    color: purple;
-    font-size: 14px;
-    background: transparent;
-    border: 1px solid mediumpurple;
-    cursor:pointer;
+.myBtn {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
 
+.myBtn:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.myBtn:focus {
+    outline: none;
+}
+
+.myBtn.myBtn {
+    background-image: linear-gradient(
+            to right,
+            #667eea,
+            #764ba2,
+            #6b8dd6,
+            #8e37d7
+    );
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }

@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import MyButton from "../button/MyButton";
 import {AuthContext} from "../../../context";
+import AboutUs from "../../../pages/AboutUs";
 
 const Navbar = () => {
 
@@ -12,15 +13,16 @@ const Navbar = () => {
     }
     return (
         <div className="navbar">
-            <MyButton onClick={logout}>
-                Выйти
-            </MyButton>
-            <div className="navbar__links">
-                <Link to= "/aboutUs"> О нас</Link>
-                <Link to="/posts">Блог</Link>
-            </div>
+            <div className="navbar-wrapper">
+            <ul className="navbar-info">
+                <li><a className="navbar-info__item" > <Link to= "/aboutUs" > О нас </Link></a></li>
+                <li><a className="navbar-info__item"> <Link to="/posts">Блог</Link></a></li>
+            </ul>
+                <MyButton onClick={logout} className="button-Out">Выйти</MyButton>
+        </div>
         </div>
     );
 };
 
 export default Navbar;
+

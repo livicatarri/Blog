@@ -23,7 +23,9 @@ function App() {
         }}>
         <BrowserRouter>
             <Navbar/>
+
             <AppRouter/>
+
         </BrowserRouter>
             </AuthContext.Provider>
 

@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
-
+.body{
+    font-family: 'Inter', sans-serif;
+}
 #root{
     display:flex;
     flex-direction: column;
@@ -20,6 +24,7 @@
     border: 2px solid darkviolet;
     margin-top: 35px;
     justify-content: space-between;
+    font-family: 'Inter', sans-serif;
 
 }
 .post-enter {
@@ -55,18 +60,83 @@
     font-weight: bold;
     background: mediumpurple;
 }
-
+.navbar-wrapper{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 5%;
+}
 .navbar{
-    height: 50px;
+    height: 85px;
     width: 100vw;
-    display: flex;
-    align-items:stretch;
-    padding: 0 10px;
     background: mediumpurple;
+    font-size: 16px;
+    position: relative;
+    box-shadow:
+            inset 1px 0 0 rgba(255,255,255,.1),
+            inset -1px 0 0 rgba(255,255,255,.1),
+            inset 150px 0 150px -150px rgba(255,255,255,.12),
+            inset -150px 0 150px -150px rgba(255,255,255,.12);
 
 }
-.navbar__links{
-    align-items: center;
-    margin-left: 15vw;
 
+.navbar:before,
+.navbar:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+.navbar:before {
+    border-bottom: 1px dashed rgba(255,255,255,.2);
+}
+.navbar:after {
+    bottom: 0;
+    border-top: 1px dashed rgba(255,255,255,.2);
+}
+.navbar-info{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.navbar-info:before,
+.navbar-info:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 0;
+    top: 8px;
+    border-top: 18px solid #7b5197;
+    border-bottom: 18px solid #7b5197;
+    transform: rotate(360deg);
+    z-index: -1;
+}
+.navbar-info:before {
+    left: -15px;
+    border-left: 12px solid rgba(255, 255, 255, 0);
+}
+.navbar-info:after {
+    right: -15px;
+    border-right: 12px solid rgba(255, 255, 255, 0);
+}
+.navbar-info li {
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.navbar-info a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    transition: .3s linear;
+}
+.navbar-info a.navbar__item,
+.navbar-info a:hover {background: rgba(0,0,0,.2);}
+.button-out{
+    padding:50%;
+    font-family: 'Inter', sans-serif;
 }
